@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* For Webkit browsers */
+::-webkit-scrollbar {
+    width: 8px;
+    /* Width of the scrollbar */
+    height: 8px;
+    /* Height of the scrollbar for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Background of the scrollbar track */
+    border-radius: 10px;
+    /* Rounded corners of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #6ee7b7, #3b82f6);
+    /* Gradient background for the scrollbar thumb */
+    border-radius: 10px;
+    /* Rounded corners of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #3b82f6, #6ee7b7);
+    /* Gradient background on hover */
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    /* Sets the width to be thin */
+    scrollbar-color: #3b82f6 #f1f1f1;
+    /* Sets the color of the thumb and track */
+}
+
+.no-arrows::-webkit-outer-spin-button,
+.no-arrows::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide the arrows in number inputs for Firefox */
+.no-arrows[type='number'] {
+    -moz-appearance: textfield;
+}
